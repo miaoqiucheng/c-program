@@ -10,10 +10,10 @@ bool bad_limits(long begin, long end,
 double sum_squares(long a, long b);
 int main(void)
 {
-	const long MIN = -10000000L;
-	const long MAX = +10000000L;
-	long start;
-	long stop;
+	const long MIN = -10000000L;　　　　／／范围的下限
+	const long MAX = +10000000L;　　　　／／范围的上限
+	long start;　　　　　　　　　　　　　／／用户指定的范围最小值
+	long stop;　　　　　　　　　　　　　／／用户指定的范围最大值
 	double answer;
 
 	printf("This program computes the sum of the squares of "
@@ -55,7 +55,7 @@ long get_long(void)
 	while (scanf("%ld", &input) != 1)
 	{
 		while ((ch = getchar()) != '\n')
-			putchar(ch);
+			putchar(ch);　　　　　　　　　　／／处理错误输入
 		printf(" is not an integer.\nPlease enter an ");
 		printf("integer value, such as 25, -133, 4: ");
 	}
@@ -73,8 +73,7 @@ double sum_squares(long a, long b)
 	return total;
 }
 
-bool bad_limits(long begin, long end,
-				long low, long high)
+bool bad_limits(long begin, long end,　long low, long high)
 {
 	bool not_good = false;
 
@@ -96,42 +95,5 @@ bool bad_limits(long begin, long end,
 
 	return not_good;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
